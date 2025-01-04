@@ -1,0 +1,35 @@
+\documentclass[12pt,openany]{book} % or any other class like `report`
+% openany: to skip empty pages
+% Packages
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage{geometry}
+\usepackage{blindtext}
+\geometry{a4paper, margin=1in}
+\usepackage{tikz}
+
+% Title Information
+\title{Mathematics for Machine Learning Notes}
+\author{Amit Thakur}
+\date{\today}
+
+% Number Equations by Chapter
+\numberwithin{equation}{chapter}
+
+\begin{document}
+
+% Title Page
+\maketitle
+
+% Table of Contents
+\tableofcontents
+
+% Include Chapters
+\include{chapters/chapter-1}
+
+% Bibliography
+\bibliographystyle{plain}
+\bibliography{references}
+
+\end{document}

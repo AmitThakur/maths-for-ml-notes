@@ -1,0 +1,48 @@
+\chapter{Convex Analysis}
+
+A convex function is one that satisfies a specific property related to its shape.
+
+\section{Definition of a Convex Function}
+A function \( f(x) \) is convex if, for any two points \( x_1 \) and \( x_2 \) in its domain,
+and any \( \alpha \in [0, 1] \):
+
+\begin{equation}
+f(\alpha x_1 + (1 - \alpha) x_2) \leq \alpha f(x_1) + (1 - \alpha) f(x_2)
+\end{equation}
+
+This means the function value at any weighted average of two points is less than or equal to the weighted average of
+the function values at those two points.
+
+\begin{figure}[h!]
+    \centering
+    \begin{tikzpicture}[scale=1.5, domain=-2:2]
+    % Draw axes
+    \draw[->] (-2.5, 0) -- (2.5, 0) node[right] {$x$};
+    \draw[->] (0, -0.5) -- (0, 4.5) node[above] {$f(x)$};
+
+    % Draw the convex function
+    \draw[smooth, thick, blue] plot (\x, {\x*\x}) node[right] {$f(x) = x^2$};
+
+    % Mark points
+    \filldraw[red] (-1, 1) circle (1.5pt) node[above left] {$(x_1, f(x_1))$};
+    \filldraw[red] (1, 1) circle (1.5pt) node[above right] {$(x_2, f(x_2))$};
+    \filldraw[green] (0, 0) circle (1.5pt) node[below left] {$(0, f(0))$};
+
+    % Add the chord
+    \draw[dashed, red] (-1, 1) -- (1, 1);
+
+    % Add labels
+%    \node at (-1.5, 5) [blue] {Convex Function: $f(x)$};
+\end{tikzpicture}
+\caption{An example TikZ picture.}
+    \label{fig:tikz_example}
+\end{figure}
+
+
+
+
+
+
+
+\nocite{*}
+
