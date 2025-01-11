@@ -1,0 +1,77 @@
+\chapter{Linear Algebra}
+
+\section{Vectors}
+
+\subsection{Basics of Vectors}
+\[
+    \mathbf{v} = \begin{bmatrix}
+        x_1 \\
+        x_2 \\
+        \vdots \\
+        x_n
+    \end{bmatrix}
+\]
+
+\begin{itemize}
+    \item Represent row vectors as $\mathbf{v} = \begin{bmatrix}
+                  x_1, & x_2, & \dots, & x_n
+    \end{bmatrix}^\mathrm{T}$
+    \item Zero vector: $\mathbf{0}$ has no direction.
+    \item $\mathbf{x}^{\mathrm{T}\mathrm{T}} = \mathbf{x}$
+    \item Commutative: $\mathbf{x} + \mathbf{y} = \mathbf{y} + \mathbf{x}$
+    \item $\mathbf{x} + \mathbf{y} = \begin{bmatrix}
+                                         x_1 + y_1, & x_2 + y_2, & \dots, & x_n + y_n
+    \end{bmatrix}^\mathrm{T}$
+    \item $\lambda \mathbf{x} = \begin{bmatrix}
+                                    \lambda x_1, & \lambda x_2, & \dots, \lambda x_n
+    \end{bmatrix}^\mathrm{T}$
+    \item $(\mathbf{x} + \mathbf{y})^\mathrm{T} = \mathbf{x}^\mathrm{T} + \mathbf{y}^\mathrm{T}$
+\end{itemize}
+
+\subsection{Dot Product}
+
+\begin{equation}
+    \alpha = \mathbf{a} \cdot \mathbf{b} = \langle \mathbf{a}, \mathbf{b} \rangle
+    = \mathbf{a}^{\mathrm{T}} \mathbf{b} = \sum_{i=1}^{n} a_i b_{i}
+\end{equation}
+
+\begin{itemize}
+    \item Dot product value: relationship between two vectors.
+    \item Inner Product: When two vectors are continuous functions.
+    \item Associative property of scalar value with a dot product:
+    \[ \lambda (\mathbf{a}^{\mathrm{T}} \mathbf{b}) = (\lambda \mathbf{a}^{\mathrm{T}})
+    \mathbf{b} = \mathbf{a}^{\mathrm{T}} (\lambda \mathbf{b}) = (\mathbf{a}^{\mathrm{T}} \mathbf{b}) \lambda \]
+    \item Commutative property: $\mathbf{a}^{\mathrm{T}} \mathbf{b} = \mathbf{b}^{\mathrm{T}} \mathbf{a}$
+    \item Distributive property: $\mathbf{x}^{\mathrm{T}} (\mathbf{y} + \mathbf{z}) = \mathbf{x}^{\mathrm{T}}\mathbf{y}
+    + \mathbf{x}^{\mathrm{T}} \mathbf{z}$
+\end{itemize}
+
+\subsubsection{Norm}
+\begin{equation}
+    \mathbf{a}^{\mathrm{T}} \mathbf{a} = \|\mathbf{a}\|
+    = \sum_{i=1}^{n} a_i a_i = \sum_{i=1}^{n} a_i^2
+\end{equation}
+
+\subsubsection{Cauchy-Schwarz Inequality}
+\begin{equation}
+    |\mathbf{x}^{\mathrm{T}} \mathbf{y}| \leq \|\mathbf{x}\| \|\mathbf{y}\|
+\end{equation}
+
+\subsubsection{Geometric Definition}
+
+\begin{equation}
+    \mathbf{x}^{\mathrm{T}} \mathbf{y} = \|\mathbf{x}\| \|\mathbf{y}\| \cos (\theta_{xy})
+\end{equation}
+
+\begin{itemize}
+    \item $\mathbf{x} \perp \mathbf{y}$: Orthogonal if $\theta = 90^\circ = \frac{\pi}{2}$
+    \item Collinear if $\theta = n \pi, n \in \{0, 1, 2, \dots, N\}$.
+    In this case, $\{\mathbf{x}, \mathbf{y}\}$ is a linearly dependent set.
+    \item $\cos \theta$ is called the Pearson correlation coefficient.
+\end{itemize}
+
+\subsection{Linear Weighted Combination}
+
+\begin{equation}
+    \mathbf{w} = \lambda_1 \mathbf{v}_1 + \lambda_2 \mathbf{v}_2 + \dots + \lambda_n \mathbf{v}_n
+\end{equation}
